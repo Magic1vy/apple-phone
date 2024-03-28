@@ -18,6 +18,16 @@ const Model = () => {
     img: yellowImg,
   })
 
+  const [isInteracting, setIsInteracting] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsInteracting(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsInteracting(false);
+  };
+
   // camera control for the model view
   const cameraControlSmall = useRef();
   const cameraControlLarge = useRef();
@@ -83,6 +93,8 @@ const Model = () => {
 
             <Canvas
               className="w-full h-full"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               style={{
                 position: 'fixed',
                 top: 0,
@@ -90,7 +102,7 @@ const Model = () => {
                 left: 0,
                 right: 0,
                 overflow: 'hidden',
-                zIndex: 1,
+                pointerEvents: isInteracting ? 'all' : 'none',
               }}
               eventSource={document.getElementById('root')}
             >
