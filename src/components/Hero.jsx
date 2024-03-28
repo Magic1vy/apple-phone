@@ -27,7 +27,7 @@ const Hero = () => {
     gsap.to('#cta', { opacity: 1, y: -50,  delay: 2.2, stagger: 0.1 })
   }, [])
   return (
-    <section  className="w-ful nav-height bg-black relative">
+    <section  className="w-ful nav-height bg-black relative z-10">
       <div className="h-5/6 w-full flex-center flex-col">
         <p id='hero' className="hero-title">iPhone 15 Pro</p>
         <div className='md:w-10/12 w-9/12'>

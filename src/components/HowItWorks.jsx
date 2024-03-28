@@ -132,7 +132,7 @@ const HowItWorks = () => {
   }, []);
 
   return (
-    <section className="common-padding">
+    <section className="common-padding z-10">
       <div className="screen-max-width">
         <div id="chip" className="flex-center w-full my-20">
           <img src={chipImg} alt="chip" width={180} height={180} />
@@ -177,7 +177,7 @@ const HowItWorks = () => {
                   </p>
 
                   <p className="hiw-text g_fadeIn mt-10">
-                   Mobile {' '}
+                    Mobile {' '}
                     <span className="text-white">
                       games will look and feel so immersive
                     </span>,
